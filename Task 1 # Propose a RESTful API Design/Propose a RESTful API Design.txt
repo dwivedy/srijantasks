@@ -1,0 +1,33 @@
+Propose a RESTful API Design for given problem is given below:
+
+
+A)  To Select a car from a fleet of cars
+
+GET: /cars/{car-id}
+return: {data for the car whose id given}
+
+B) To Start the car
+
+PUT: /car/status/start true
+BODY: {data for starting car}
+return: {car status}
+
+C) To Drive the car
+
+PUT: /car/status/drive true
+BODY: {data for driving car}
+return: {car status}
+
+
+B) To Stop the car
+
+PUT: /car/status/stop true
+BODY: {data for stopping car}
+return: {car status}
+
+
+HTTP Methods Used:
+
+GET - Should be used to retrieve data from the server. Means "give me a representation of this resource identified by this URL". It's worth noting that we must never use GET to change resources. 
+
+PUT - Should be used to update existing server resources by replacing their old state with a new one. Means "use this representation to replace the resource identified by this URL".
